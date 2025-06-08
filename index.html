@@ -1,13 +1,63 @@
-<!DOCTYPE html><html><head><meta charset="utf-8">
-<link rel="stylesheet" href="css/style.css">
-</head><body>
-<div class="container">
-  <h1>Hindi Song Recommender</h1>
-  <input id="search" placeholder="Search songs...">
-  <div id="cats"></div>
-  <div id="songs"></div>
-  <h2>Favorites</h2><div id="favs"></div>
-  <h2>Recently Played</h2><div id="recent"></div>
-</div>
-<script src="js/app.js"></script>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BollyBeats - Hindi Song Recommender</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <h1>BollyBeats</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search songs...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <button id="show-favorites"><i class="fas fa-heart"></i> Favorites</button>
+        </header>
+
+        <div class="hero">
+            <h2>Discover Perfect Songs For Every Mood</h2>
+            <div class="category-buttons">
+                <button class="active" data-category="all">All</button>
+                <button data-category="romantic">Romantic</button>
+                <button data-category="party">Party</button>
+                <button data-category="sad">Sad</button>
+                <button data-category="workout">Workout</button>
+                <button data-category="devotional">Devotional</button>
+            </div>
+        </div>
+
+        <div class="songs-grid" id="songs-container">
+            <!-- Songs will load here -->
+        </div>
+
+        <div class="player" id="player">
+            <div class="player-info">
+                <img id="now-playing-img" src="" alt="Now Playing">
+                <div>
+                    <h3 id="now-playing-title">Select a song</h3>
+                    <p id="now-playing-artist"></p>
+                </div>
+            </div>
+            <audio id="audio" controls></audio>
+            <button id="player-fav-btn"><i class="far fa-heart"></i></button>
+        </div>
+    </div>
+
+    <div class="modal" id="favorites-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Favorite Songs</h2>
+            <div id="favorites-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
