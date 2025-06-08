@@ -1,9 +1,0 @@
-title: BollyBeats - Hindi Song Recommender
-description: A personalized Hindi song recommendation system
-theme: minima
-plugins:
-  - jekyll-feed
-exclude:
-  - node_modules
-  - package.json
-  - package-lock.json
