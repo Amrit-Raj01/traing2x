@@ -323,4 +323,53 @@ nav button:hover {
 
 .fav-songs {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.fav-song-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.fav-song-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.fav-song-info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.fav-song-info p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .song-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .player {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .player-info {
+        width: 100%;
+    }
+    
+    #audio-player {
+        width: 100%;
+    }
+}
